@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница платежа</title>
+    <link rel="stylesheet" href="PaymentPage.css">
+</head>
+
+<body>
+<header>
+    <h1>Страница платежа</h1>
+</header>
+
+<main>
+    <section class="user-info">
+        <img src="logo.jpg" alt="Картинки нетыу" class="logo">
+        <section class="client-name">
+            <h3>Индивидуальный предприниматель Швецова Мария Владимировна</h3>
+        </section>
+        <section class="client-contacts">
+            <a class="client-phone" href="tel:+7343199231">+7343199231</a>
+            <a class="client-website" href="http://www.mary.com">www.mary.com</a>
+            <a class="client-email" href="mailto:mary@gmail.com">mary@gmail.com</a>
+        </section>
+        <a class="company-info" href="http://www.mary.com">Информация о компании</a>
+        <a class="requisites" href="http://www.mary.com">Показать реквизиты</a>
+    </section>
+
+    <hr>
+    <section class="payment">
+        <input type="radio" id="pay" name="payment-operation" checked>
+        <label for="pay">Заплатить</label>
+        <input type="radio" id="request-payment" name="payment-operation">
+        <label for="request-payment">Запросить платеж</label>
+
+        <section class="pay">
+            <input type="radio" id="any-bank" name="payment-way" checked>
+            <label for="any-bank">С карты любого банка</label>
+            <input type="radio" id="inet-bank" name="payment-way">
+            <label for="inet-bank">Из своего интренет-банка</label>
+            <section class="any-bank">
+                <form>
+                    <section class="card-requisites">
+                        <input placeholder="Номер карты" required id="card-number">
+                        <input placeholder="ММ/ГГ" required id="date">
+                        <input placeholder="CVC" required id="cvc">
+                    </section>
+                    <label for="sum">Сумма</label>
+                    <input placeholder="от 1000 до 75000&#x20bd;" required id="sum">
+                    <label for="com">Комментарий</label>
+                    <input placeholder="До 150 символов" id="com">
+                    <label for="email">Ваша эл.почта</label>
+                    <input placeholder="Для квитанций об оплате" type="email" required id="email">
+                    <button type="submit">Заплатить</button>
+                </form>
+            </section>
+
+            <section class="inet-bank">
+                <p>Сформируйте платежку и загрузите её в свой банк для подписи</p>
+                <form>
+                    <input placeholder="ИНН или название плательщика" required id="inn">
+                    <label for="inn">От кого</label>
+                    <br>
+                    <input required id="bik">
+                    <label for="bik">БИК</label>
+                    <br>
+                    <input required id="num">
+                    <label for="num">Номер счета</label>
+                    <br>
+                    <input placeholder="Назначение платежа" id="dest">
+                    <label for="dest">За что</label>
+                    <br>
+                    <section class="nds">
+                        <label><input type="radio" name="nds">НДС 18%</label>
+                        <label><input type="radio" name="nds">НДС 10%</label>
+                        <label><input type="radio" name="nds">Без НДС%</label>
+                    </section>
+                    <br>
+                    <input placeholder="Укажите сумму" required id="ibsum">
+                    <label for="ibsum">Сколько</label>
+                    <br>
+                    <br>
+                    <button type="submit">Получить файл для интернет-банка</button>
+                    <button type="reset">Очистить форму</button>
+                </form>
+            </section>
+
+        </section>
+
+        <section class="request-payment">
+            <p>Создайте платежку, а индивидуальный предприниматель Швецова Мария Валерьевна подпишет её у себя в
+                интрернет-банке</p>
+            <br>
+            <form>
+                <input placeholder="ИНН или название получателя" required id="rq-inn">
+                <label for="rq-inn">ИНН получателя</label>
+                <br>
+                <input required id="rq-bik">
+                <label for="rq-bik">БИК</label>
+                <br>
+                <input required id="rq-num">
+                <label for="rq-num">Номер счета</label>
+                <br>
+                <input placeholder="Назначение платежа" id="rq-dest">
+                <label for="rq-dest">За что</label>
+                <br>
+                <section class="nds">
+                    <input type="radio" id="nds18" name="nds">
+                    <label for="nds18">НДС 18%</label>
+                    <input type="radio" id="nds10" name="nds">
+                    <label for="nds10">НДС 10%</label>
+                    <input type="radio" id="none-nds" name="nds">
+                    <label for="none-nds">Без НДС</label>
+                </section>
+                <br>
+                <input placeholder="Укажите сумму" required id="rq-sum">
+                <label for="rq-sum">Сколько</label>
+                <br>
+                <br>
+                <input placeholder="+7" required id="rq-tel">
+                <label for="rq-tel">Номер телефона</label>
+                <br>
+                <a id="personal-data" href="http://www.mary.com">Оставляя телефон, вы соглашаетесь на обработку
+                    персональных данных</a>
+                <br>
+                <input placeholder="Для уведомлений об оплате" required id="rq-email">
+                <label for="rq-email">Эл.почта</label>
+                <br>
+                <button type="submit">Создать платеж</button>
+                <button type="reset">Очистить форму</button>
+            </form>
+        </section>
+
+
+    </section>
+    <hr>
+    <section>
+        <p>О компании индивидуальный предприниматель Швецова Мария Валерьевна</p>
+        <section class="services">
+            <div>
+                <img src="strawberry.jpg">
+                <h4>Клубника</h4>
+                <p>139,99 руб.</p>
+            </div>
+            <div>
+                <img src="beach.jpg">
+                <h4>Золотой пляж</h4>
+                <p>35,89 руб.</p>
+            </div>
+            <div>
+                <img src="excursion.JPG">
+                <h4>Экскурсии</h4>
+                <p>1000р/час.</p>
+            </div>
+        </section>
+    </section>
+</main>
+
+</body>
+</html>
